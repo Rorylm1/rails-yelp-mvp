@@ -1,0 +1,7 @@
+<h1>Restaurants</h1>
+<% @restaurants.each do |restaurant| %>
+<%= link_to restaurant.name, "restaurants/#{restaurant.id}", class: "btn btn-primary" %>
+<%= link_to "Write a review?", "restaurants/#{restaurant.id}/reviews/new", class: "btn btn-danger" %><br>
+<% end %>
+
+<button type="button" class="btn btn-success" class="button"><%= link_to "Create a new restaurants", "restaurants/new" %></button>
